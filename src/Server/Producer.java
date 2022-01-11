@@ -18,7 +18,6 @@ public class Producer implements Runnable {
     @Override
     public void run() {
         //初始化截图器
-        Screenshot ss = new Screenshot();
         while (true) {
             try {
                 if(socket.isClosed()) {
@@ -26,8 +25,8 @@ public class Producer implements Runnable {
                     break;
                 }
                 // 获取一帧图像放入共享队列中
-                queue.put(ss.imageGet());
-                Thread.sleep(50);
+                queue.put(Screenshot.imageGet());
+                Thread.sleep(40);
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
