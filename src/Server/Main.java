@@ -19,9 +19,6 @@ import java.util.concurrent.ThreadFactory;
 
 public class Main {
 
-    // 初始化截图器
-    static Screenshot ss = new Screenshot();
-
     public static void main(String[] args) throws Exception {
         // 服务端监听socket初始化
         ServerSocket serverSocket = new ServerSocket(12345);
